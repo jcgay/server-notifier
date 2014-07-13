@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>fr.jcgay.maven</groupId>
+        <artifactId>jcgay-build-configuration</artifactId>
+        <version>1.1</version>
+    </parent>
+
+    <groupId>fr.jcgay.server-notifier</groupId>
+    <artifactId>server-notifier</artifactId>
+    <version>0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+    <name>Server Notifier</name>
+    <description>Listeners to send notifications when your favorite app container start</description>
+    <scm>
+        <url>https://github.com/jcgay/server-notifier</url>
+        <connection>scm:git:git://github.com/jcgay/server-notifier.git</connection>
+        <developerConnection>scm:git:git@github.com:jcgay/server-notifier.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+	
+</project>
