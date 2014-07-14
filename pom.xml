@@ -1,10 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>fr.jcgay.maven</groupId>
         <artifactId>jcgay-build-configuration</artifactId>
-        <version>1.1</version>
+        <version>1.3</version>
     </parent>
 
     <groupId>fr.jcgay.server-notifier</groupId>
@@ -13,11 +14,60 @@
 	<packaging>pom</packaging>
     <name>Server Notifier</name>
     <description>Listeners to send notifications when your favorite app container start</description>
+
     <scm>
         <url>https://github.com/jcgay/server-notifier</url>
         <connection>scm:git:git://github.com/jcgay/server-notifier.git</connection>
         <developerConnection>scm:git:git@github.com:jcgay/server-notifier.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-	
+
+    <properties>
+        <tomcat.version>7.0.59</tomcat.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>fr.jcgay.send-notification</groupId>
+                <artifactId>send-notification</artifactId>
+                <version>0.3</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-catalina</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat</groupId>
+                <artifactId>tomcat-coyote</artifactId>
+                <version>${tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy</artifactId>
+                <version>2.4.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>1.7.1</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>2.0.5-beta</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>tomcat-7-notifier</module>
+    </modules>
+
 </project>
