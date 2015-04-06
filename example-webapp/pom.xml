@@ -24,7 +24,8 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <contextFile>src/tomcat/context.xml</contextFile>
+                    <!--<contextFile>src/tomcat/context.xml</contextFile>-->
+                    <serverXml>src/tomcat/server.xml</serverXml>
                 </configuration>
                 <dependencies>
                     <dependency>

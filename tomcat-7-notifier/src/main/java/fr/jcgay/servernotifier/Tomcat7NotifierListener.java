@@ -67,21 +67,21 @@ public class Tomcat7NotifierListener implements LifecycleListener{
             hasFailed = true;
 
             Notification notification =
-                    Notification.builder(TOMCAT, "Application [" + getName(event) + "] has failed to start !", failIcon)
+                    Notification.builder(TOMCAT, getName(event) + " has failed to start !", failIcon)
                             .build();
             send(notification);
         }
 
         if (hasType(event, AFTER_START_EVENT) && hasState(event, STARTED)) {
             Notification notification =
-                    Notification.builder(TOMCAT, "Application [" + getName(event) + "] has started !", successIcon)
+                    Notification.builder(TOMCAT, getName(event) + " has started !", successIcon)
                             .build();
             send(notification);
         }
 
         if (hasType(event, AFTER_STOP_EVENT) && hasState(event, STOPPED) && !hasFailed) {
             Notification notification =
-                    Notification.builder(TOMCAT, "Application [" + getName(event) + "] has stopped !", appIcon)
+                    Notification.builder(TOMCAT, getName(event) + " has stopped !", appIcon)
                             .build();
             send(notification);
         }
@@ -112,6 +112,6 @@ public class Tomcat7NotifierListener implements LifecycleListener{
         if (event.getSource() instanceof StandardContext) {
             return ((StandardContext) event.getSource()).getName();
         }
-        return "";
+        return TOMCAT;
     }
 }
