@@ -30,7 +30,7 @@ class Tomcat7NotifierListenerTest {
     private StandardContext context
 
     @InjectMocks
-    private Tomcat7NotifierListener listener
+    private TomcatNotifierListener listener
 
     @Test
     void 'should send notification when application has started'() {

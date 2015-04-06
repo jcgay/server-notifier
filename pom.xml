@@ -89,7 +89,7 @@
     </build>
 
     <modules>
-        <module>tomcat-7-notifier</module>
+        <module>tomcat-notifier</module>
         <module>jetty-7-notifier</module>
     </modules>
 

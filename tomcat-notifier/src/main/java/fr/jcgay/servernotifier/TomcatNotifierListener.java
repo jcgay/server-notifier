@@ -22,9 +22,9 @@ import static org.apache.catalina.LifecycleState.FAILED;
 import static org.apache.catalina.LifecycleState.STARTED;
 import static org.apache.catalina.LifecycleState.STOPPED;
 
-public class Tomcat7NotifierListener implements LifecycleListener{
+public class TomcatNotifierListener implements LifecycleListener{
 
-    private static final Log LOGGER = LogFactory.getLog(Tomcat7NotifierListener.class);
+    private static final Log LOGGER = LogFactory.getLog(TomcatNotifierListener.class);
 
     private static final String TOMCAT = "Tomcat";
 
@@ -36,7 +36,7 @@ public class Tomcat7NotifierListener implements LifecycleListener{
     private boolean skipNotifications;
     private boolean hasFailed;
 
-    public Tomcat7NotifierListener() {
+    public TomcatNotifierListener() {
         Application application = Application.builder("application/x-vnd-apache.tomcat", TOMCAT, appIcon)
                 .withTimeout(TimeUnit.SECONDS.toMillis(2))
                 .build();
@@ -53,7 +53,7 @@ public class Tomcat7NotifierListener implements LifecycleListener{
         }
     }
 
-    Tomcat7NotifierListener(Notifier notifier) {
+    TomcatNotifierListener(Notifier notifier) {
         this.notifier = notifier;
     }
 

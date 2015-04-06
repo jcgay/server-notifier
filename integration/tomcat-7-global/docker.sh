@@ -3,7 +3,7 @@
 if [ "$1" == "build" ]; then
     version=`xmlstarlet sel -N ns="http://maven.apache.org/POM/4.0.0" -t -c "/ns:project/ns:version/text()" -n ../../pom.xml` &&
     mvn clean package -f ../../pom.xml &&
-    cp ../../tomcat-7-notifier/target/tomcat-7-notifier-$version-shaded.jar tomcat-7-notifier.jar
+    cp ../../tomcat-notifier/target/tomcat-notifier-$version-shaded.jar tomcat-notifier.jar
     mvn clean package -f ../../example-webapp/pom.xml &&
     cp ../../example-webapp/target/example-webapp.war . &&
     cp ../.send-notification . &&

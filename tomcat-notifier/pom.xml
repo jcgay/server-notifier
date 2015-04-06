@@ -7,9 +7,9 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>tomcat-7-notifier</artifactId>
-    <name>Tomcat 7 Notifier</name>
-    <description>Listener to send notifications for Tomcat 7</description>
+    <artifactId>tomcat-notifier</artifactId>
+    <name>Tomcat Notifier</name>
+    <description>Listener to send notifications for Tomcat 7/8</description>
 
     <dependencies>
         <dependency>

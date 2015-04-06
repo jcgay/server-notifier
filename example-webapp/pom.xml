@@ -30,7 +30,7 @@
                 <dependencies>
                     <dependency>
                         <groupId>${project.groupId}</groupId>
-                        <artifactId>tomcat-7-notifier</artifactId>
+                        <artifactId>tomcat-notifier</artifactId>
                         <version>${project.version}</version>
                     </dependency>
                 </dependencies>
