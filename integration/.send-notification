@@ -1,0 +1,3 @@
+notifier.implementation=pushbullet
+notifier.pushbullet.apikey=#apikey#
+notifier.pushbullet.device=#device#
