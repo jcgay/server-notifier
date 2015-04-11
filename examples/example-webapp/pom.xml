@@ -5,28 +5,28 @@
         <groupId>fr.jcgay.server-notifier</groupId>
         <artifactId>server-notifier</artifactId>
         <version>0.1-SNAPSHOT</version>
+        <relativePath>../..</relativePath>
     </parent>
 
-    <artifactId>fail-example-webapp</artifactId>
+    <artifactId>example-webapp</artifactId>
     <packaging>war</packaging>
-
-    <dependencies>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warName>${project.artifactId}</warName>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <contextFile>src/tomcat/context.xml</contextFile>
+                    <!--<contextFile>src/tomcat/context.xml</contextFile>-->
+                    <serverXml>src/tomcat/server.xml</serverXml>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -37,11 +37,11 @@
                 </dependencies>
             </plugin>
             <plugin>
-                <groupId>org.eclipse.jetty</groupId>
+                <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.3.0.M1</version>
+                <version>7.6.16.v20140903</version>
                 <configuration>
-                    <!--<jettyXml>src/jetty/jetty.xml</jettyXml>-->
+                    <jettyXml>src/jetty/jetty.xml</jettyXml>
                 </configuration>
                 <dependencies>
                     <dependency>
