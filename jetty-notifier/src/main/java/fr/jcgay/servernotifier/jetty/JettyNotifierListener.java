@@ -12,15 +12,15 @@ import java.util.concurrent.TimeUnit;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-public class Jetty7NotifierListener implements LifeCycle.Listener {
+public class JettyNotifierListener implements LifeCycle.Listener {
 
-    private static final Logger LOGGER = getLogger(Jetty7NotifierListener.class);
+    private static final Logger LOGGER = getLogger(JettyNotifierListener.class);
 
     private final Notifier notifier;
 
     private boolean skipNotifications;
 
-    public Jetty7NotifierListener() {
+    public JettyNotifierListener() {
         Application application = Application.builder("application/x-vnd-eclipse.jetty", "Jetty", Icons.jetty())
                 .withTimeout(TimeUnit.SECONDS.toMillis(2))
                 .build();
@@ -37,7 +37,7 @@ public class Jetty7NotifierListener implements LifeCycle.Listener {
         }
     }
 
-    Jetty7NotifierListener(Notifier notifier) {
+    JettyNotifierListener(Notifier notifier) {
         this.notifier = notifier;
     }
 

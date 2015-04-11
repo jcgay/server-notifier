@@ -7,9 +7,9 @@
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jetty-7-notifier</artifactId>
-    <name>Jetty 7 Notifier</name>
-    <description>Listener to send notifications for Jetty 7</description>
+    <artifactId>jetty-notifier</artifactId>
+    <name>Jetty Notifier</name>
+    <description>Listener to send notifications for Jetty 7/8/9</description>
 
     <dependencies>
         <dependency>

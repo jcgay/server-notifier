@@ -14,13 +14,13 @@ import static org.mockito.Mockito.inOrder
 import static org.mockito.Mockito.verify
 
 @CompileStatic
-class Jetty7NotifierListenerTest {
+class JettyNotifierListenerTest {
 
     @Rule
     public MockitoRule mockito = MockitoJUnit.rule()
 
     @InjectMocks
-    Jetty7NotifierListener listener
+    JettyNotifierListener listener
 
     @Mock
     Notifier notifier

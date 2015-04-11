@@ -54,7 +54,7 @@
                 <dependencies>
                     <dependency>
                         <groupId>${project.groupId}</groupId>
-                        <artifactId>jetty-7-notifier</artifactId>
+                        <artifactId>jetty-notifier</artifactId>
                         <version>${project.version}</version>
                     </dependency>
                 </dependencies>

@@ -90,7 +90,7 @@
 
     <modules>
         <module>tomcat-notifier</module>
-        <module>jetty-7-notifier</module>
+        <module>jetty-notifier</module>
     </modules>
 
     <profiles>

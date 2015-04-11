@@ -5,7 +5,7 @@ if [ "$1" == "build" ]; then
     webapp='../example-webapp'
     rm *.jar *.war .send-notification
     mvn clean package -f ../../pom.xml &&
-    cp ../../jetty-7-notifier/target/jetty-7-notifier-$version-shaded.jar jetty-notifier.jar
+    cp ../../jetty-notifier/target/jetty-notifier-$version-shaded.jar jetty-notifier.jar
     mvn clean package -f $webapp/pom.xml &&
     cp $webapp/target/example-webapp.war . &&
     cp ../.send-notification . &&
