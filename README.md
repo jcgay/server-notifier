@@ -15,7 +15,7 @@ By default it will try to use `Growl` for Windows, OSX and `notify-send` for `Li
  - Configure a new [listener](https://tomcat.apache.org/tomcat-7.0-doc/config/listeners.html) in `$CATALINA_HOME/conf/Catalina/[host]/[application].xml` (ie `context.xml`) or in `$CATALINA_HOME/conf/server.xml` depending if you want a notification for just a webapp or for the server globally  
 
     ```
-    <Listener className="fr.jcgay.servernotifier.TomcatNotifierListener" />
+    <Listener className="fr.jcgay.servernotifier.tomcat.TomcatNotifierListener" />
     ```
 
 You can find example of `context.xml` or `server.xml` in [example-webapp]().
@@ -46,6 +46,6 @@ with `context.xml` minimum configuration:
 ```
 <?xml version='1.0' encoding='utf-8'?>
 <Context>
-	<Listener className="fr.jcgay.servernotifier.TomcatNotifierListener" />
+	<Listener className="fr.jcgay.servernotifier.tomcat.TomcatNotifierListener" />
 </Context>
 ```

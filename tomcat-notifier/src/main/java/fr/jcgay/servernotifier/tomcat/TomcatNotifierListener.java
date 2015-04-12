@@ -1,4 +1,4 @@
-package fr.jcgay.servernotifier;
+package fr.jcgay.servernotifier.tomcat;
 
 import fr.jcgay.notification.Application;
 import fr.jcgay.notification.Icon;

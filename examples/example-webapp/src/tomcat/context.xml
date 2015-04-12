@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Context>
-	<Listener className="fr.jcgay.servernotifier.TomcatNotifierListener" />
+	<Listener className="fr.jcgay.servernotifier.tomcat.TomcatNotifierListener" />
 </Context>
