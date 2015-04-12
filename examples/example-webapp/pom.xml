@@ -34,6 +34,12 @@
                         <artifactId>tomcat-notifier</artifactId>
                         <version>${project.version}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-simple</artifactId>
+                        <version>1.7.12</version>
+                        <scope>runtime</scope>
+                    </dependency>
                 </dependencies>
             </plugin>
             <plugin>
@@ -48,6 +54,12 @@
                         <groupId>${project.groupId}</groupId>
                         <artifactId>jetty-notifier</artifactId>
                         <version>${project.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-simple</artifactId>
+                        <version>1.7.12</version>
+                        <scope>runtime</scope>
                     </dependency>
                 </dependencies>
             </plugin>
