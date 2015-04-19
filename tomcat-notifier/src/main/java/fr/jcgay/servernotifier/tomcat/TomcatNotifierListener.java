@@ -22,7 +22,7 @@ import static org.apache.catalina.LifecycleState.FAILED;
 import static org.apache.catalina.LifecycleState.STARTED;
 import static org.apache.catalina.LifecycleState.STOPPED;
 
-public class TomcatNotifierListener implements LifecycleListener{
+public class TomcatNotifierListener implements LifecycleListener {
 
     private static final Log LOGGER = LogFactory.getLog(TomcatNotifierListener.class);
 
@@ -38,12 +38,12 @@ public class TomcatNotifierListener implements LifecycleListener{
 
     public TomcatNotifierListener() {
         Application application = Application.builder("application/x-vnd-apache.tomcat", TOMCAT, appIcon)
-                .withTimeout(TimeUnit.SECONDS.toMillis(2))
-                .build();
+            .withTimeout(TimeUnit.SECONDS.toMillis(2))
+            .build();
 
         notifier = new SendNotification()
-                .setApplication(application)
-                .chooseNotifier();
+            .setApplication(application)
+            .chooseNotifier();
 
         try {
             notifier.init();
@@ -67,22 +67,22 @@ public class TomcatNotifierListener implements LifecycleListener{
             hasFailed = true;
 
             Notification notification =
-                    Notification.builder(TOMCAT, getName(event) + " has failed to start !", failIcon)
-                            .build();
+                Notification.builder(TOMCAT, getName(event) + " has failed to start !", failIcon)
+                    .build();
             send(notification);
         }
 
         if (hasType(event, AFTER_START_EVENT) && hasState(event, STARTED)) {
             Notification notification =
-                    Notification.builder(TOMCAT, getName(event) + " has started !", successIcon)
-                            .build();
+                Notification.builder(TOMCAT, getName(event) + " has started !", successIcon)
+                    .build();
             send(notification);
         }
 
         if (hasType(event, AFTER_STOP_EVENT) && hasState(event, STOPPED) && !hasFailed) {
             Notification notification =
-                    Notification.builder(TOMCAT, getName(event) + " has stopped !", appIcon)
-                            .build();
+                Notification.builder(TOMCAT, getName(event) + " has stopped !", appIcon)
+                    .build();
             send(notification);
         }
 

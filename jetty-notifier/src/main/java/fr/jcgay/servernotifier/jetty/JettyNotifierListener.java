@@ -22,12 +22,12 @@ public class JettyNotifierListener implements LifeCycle.Listener {
 
     public JettyNotifierListener() {
         Application application = Application.builder("application/x-vnd-eclipse.jetty", "Jetty", Icons.jetty())
-                .withTimeout(TimeUnit.SECONDS.toMillis(2))
-                .build();
+            .withTimeout(TimeUnit.SECONDS.toMillis(2))
+            .build();
 
         notifier = new SendNotification()
-                .setApplication(application)
-                .chooseNotifier();
+            .setApplication(application)
+            .chooseNotifier();
 
         try {
             notifier.init();
@@ -42,7 +42,8 @@ public class JettyNotifierListener implements LifeCycle.Listener {
     }
 
     @Override
-    public void lifeCycleStarting(LifeCycle lifeCycle) {}
+    public void lifeCycleStarting(LifeCycle lifeCycle) {
+    }
 
     @Override
     public void lifeCycleStarted(LifeCycle lifeCycle) {
@@ -51,16 +52,18 @@ public class JettyNotifierListener implements LifeCycle.Listener {
         }
 
         Notification notification =
-                Notification.builder("Jetty", "Server has started !", Icons.jetty())
-                        .build();
+            Notification.builder("Jetty", "Server has started !", Icons.jetty())
+                .build();
         send(notification);
     }
 
     @Override
-    public void lifeCycleFailure(LifeCycle lifeCycle, Throwable throwable) {}
+    public void lifeCycleFailure(LifeCycle lifeCycle, Throwable throwable) {
+    }
 
     @Override
-    public void lifeCycleStopping(LifeCycle lifeCycle) {}
+    public void lifeCycleStopping(LifeCycle lifeCycle) {
+    }
 
     @Override
     public void lifeCycleStopped(LifeCycle lifeCycle) {
@@ -69,8 +72,8 @@ public class JettyNotifierListener implements LifeCycle.Listener {
         }
 
         Notification notification =
-                Notification.builder("Jetty", "Server has stopped !", Icons.jetty())
-                        .build();
+            Notification.builder("Jetty", "Server has stopped !", Icons.jetty())
+                .build();
         send(notification);
 
         notifier.close();

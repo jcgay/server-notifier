@@ -3,7 +3,7 @@
 <Configure id="Server" class="org.eclipse.jetty.webapp.WebAppContext">
     <Call name="addLifeCycleListener">
         <Arg>
-            <New class="fr.jcgay.servernotifier.jetty.JettyNotifierListener" />
+            <New class="fr.jcgay.servernotifier.jetty.JettyNotifierListener"/>
         </Arg>
     </Call>
 </Configure>

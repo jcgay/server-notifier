@@ -1,4 +1,5 @@
 package fr.jcgay.servernotifier.jetty
+
 import fr.jcgay.notification.Notification
 import fr.jcgay.notification.Notifier
 import groovy.transform.CompileStatic

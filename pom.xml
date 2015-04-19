@@ -11,7 +11,7 @@
     <groupId>fr.jcgay.server-notifier</groupId>
     <artifactId>server-notifier</artifactId>
     <version>0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <packaging>pom</packaging>
     <name>Server Notifier</name>
     <description>Listeners to send notifications when your favorite app container start</description>
 
