@@ -11,7 +11,7 @@ By default it will try to use `Growl` for Windows, OSX and `notify-send` for `Li
 
 ### Installation
 
- - Get [tomcat-notifier](http://search.maven.org/remotecontent?filepath=fr/jcgay/servernotifier/0.1/tomcat-notifier-0.1-shaded.jar) and copy it in `$CATALINA_HOME/lib`
+ - Get [tomcat-notifier](http://search.maven.org/remotecontent?filepath=fr/jcgay/server-notifier/tomcat-notifier/0.1/tomcat-notifier-0.1-shaded.jar) and copy it in `$CATALINA_HOME/lib`
  - Configure a new [listener](https://tomcat.apache.org/tomcat-7.0-doc/config/listeners.html) in `$CATALINA_HOME/conf/Catalina/[host]/[application].xml` (ie `context.xml`) or in `$CATALINA_HOME/conf/server.xml` depending if you want a notification for just a webapp or for the server globally  
 
     ```
@@ -60,7 +60,7 @@ with `context.xml` minimal configuration:
 
 ### Installation
 
-- Get [jetty-notifier](http://search.maven.org/remotecontent?filepath=fr/jcgay/servernotifier/0.1/jetty-notifier-0.1-shaded.jar) and copty it in `$JETTY_HOME/lib/ext`
+- Get [jetty-notifier](http://search.maven.org/remotecontent?filepath=fr/jcgay/server-notifier/jetty-notifier/0.1/jetty-notifier-0.1-shaded.jar) and copty it in `$JETTY_HOME/lib/ext`
 - Configure a new listener in `$JETTY_HOME/etc/jetty.xml`
 
 	```
